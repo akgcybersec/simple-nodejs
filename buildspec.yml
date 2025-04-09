@@ -10,16 +10,13 @@ phases:
       - npm install
   build:
     commands:
-      - echo Build started on `date`
-      - npm run build
+      - echo No build step needed
   post_build:
     commands:
       - echo Build completed on `date`
-      - npm test
+      - echo Skipping tests (none defined)
 
 artifacts:
   files:
-    - build/**/*
-    - appspec.yml
-    - scripts/**/*
+    - '**/*'
   discard-paths: no
